@@ -89,6 +89,15 @@ MIDDLEWARE = [
 # CORS
 # ==============================
 
+# Development/test me
+CORS_ALLOW_ALL_ORIGINS = True
+
+
+# Ya production me specific domains allow karo
+CORS_ALLOWED_ORIGINS = [
+    "https://airbnb-1-topaz.vercel.app",
+]
+
 ALLOWED_HOSTS = ['*']  # ya specific Render URL
 
 # optional: if using runserver in dev

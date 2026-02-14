@@ -31,7 +31,6 @@ def host_login_api(request):
     city = request.data.get('city')
     state = request.data.get('state')
     country = request.data.get('country')
-
     try:
         user = CustomUser.objects.get(email=userEmail, password=userPassword)
 
