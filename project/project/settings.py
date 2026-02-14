@@ -89,6 +89,11 @@ MIDDLEWARE = [
 # CORS
 # ==============================
 
+ALLOWED_HOSTS = ['*']  # ya specific Render URL
+
+# optional: if using runserver in dev
+PORT = os.environ.get('PORT', 8000)
+
 CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL', default=True, cast=bool)
 
 
