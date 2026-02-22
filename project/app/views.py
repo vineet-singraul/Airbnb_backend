@@ -399,7 +399,19 @@ def Host_Approvel_Process(request,id):
 
 
 
-
+# === ** YAHA SE HOST DASHBORD DUSRI BAR RENDER HONE PER ** ====== // 
+@api_view(['GET'])
+def host_Profile_DashBord(request, pk):
+    print("*************************")
+    print("PK : ",pk)
+    print("*************************")
+    try:
+        host = HostProfile.objects.get(host__email=pk)
+        serializer = HostProfileSerializer(host)
+        return Response(serializer.data)   # 🔥 Pura data yaha se jayega
+    except HostProfile.DoesNotExist:
+        return Response({"error": "Host not found"}, status=404)
+# =================== """" END HAER """""" ========================
 
 
 

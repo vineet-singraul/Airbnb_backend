@@ -16,7 +16,7 @@ urlpatterns = [
    path('host-Edit-BTN-Property-All/<int:pk>/', host_Edit_BTN_Property_All_Fun),
    path('Host-Dashboard/<str:pk>/',host_Dashboard),
    path('Host-Approvel-Process/<int:id>/',Host_Approvel_Process),
-   
+   path('host-Profile-DashBord/<str:pk>/',host_Profile_DashBord),
 
  
 
